@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Automated StackOverflow thingy</title>
+        <meta name="viewport" content="width=device-width,user-scalable=no">
+        <link rel="stylesheet" href="css/main.app.css">
+    </head>
+    <body>
+        <h2>Automated <img src="img/sosmall.png" style="height: 30px;"> thingy</h2>
+        <div id="questionerPort">
+            <span>Currently supports
+                <select id="languageInfo">
+                    <option value="js">JavaScript</option>
+                </select>
+                (will debug the one selected)
+            </span>
+            <form action="javascript:io.fixCode()">
+                <textarea id="issueContainer" placeholder="enter issue"></textarea>
+                <textarea id="codeContainer" placeholder="enter code"></textarea><br>
+                <input class="btn" type="submit"></input>
+            </form>
+        </div>
+        <div id="loaderPort" style="display: none">
+            <img id="defLoader" src="https://i.stack.imgur.com/lX4Ew.gif" height="20px">
+        </div>
+        <div id="answerPort" style="display: none">
+            <div id="resultShowPort">
+
+            </div>
+            <div>
+                <button class="btn" id="backport">Ask another question</button>
+            </div>
+        </div>
+        <span>Thank you to the developers who have contributed to this project!</span><br>
+        <strong>I need developers to join this project!! <a href="https://github.com/prazma/ppRepo">Join the development on GitHub</a></strong>
+        <hr>
+        <span>This project uses both custom search and interpretation algorithm, as well as the famously known Ai deep learning algorithms to learn from unirrelevent answer experiences.</span>
+        <script src="lang/lang.intentionKey.js"></script>
+        <script src="js/data.io.js"></script>
+    </body>
+</html>
