@@ -32,8 +32,10 @@ var io = {
                 gPattern.push("5");
             } else if (langKeys.replacement.indexOf(issueA[i]) != -1 ) {
                 gPattern.push("6");
-            } else if ( langKeys.verb.indexOf(issueA[i]) == -1 && langKeys.connectives.indexOf(issueA[i]) == -1 && langKeys.pointers.indexOf(issueA[i]) == -1 && langKeys.number.indexOf(issueA[i]) == -1 && langKeys.replacement.indexOf(issueA[i]) == -1 && langKeys.features.indexOf(issueA[i]) == -1 ) {
+            } else if (langKeys.questioners.indexOf(issueA[i]) != -1 ) {
                 gPattern.push("7");
+            } else if ( langKeys.verb.indexOf(issueA[i]) == -1 && langKeys.connectives.indexOf(issueA[i]) == -1 && langKeys.pointers.indexOf(issueA[i]) == -1 && langKeys.number.indexOf(issueA[i]) == -1 && langKeys.replacement.indexOf(issueA[i]) == -1 && langKeys.features.indexOf(issueA[i]) == -1 ) {
+                gPattern.push("8");
             }
         }
         var gPatternS = gPattern.join("");
@@ -47,12 +49,12 @@ var io = {
         console.log(patternStringA);
         //work from here
         for(i=0;i<patternStringA.length;i++){
-            if(patternStringA[i] == "7") {
+            if(patternStringA[i] == "8") {
                 //this is just the simple version
                 nounQue.push(i);
                 console.log(patternStringA[i+1]);
                 if(patternStringA[i+1] == "3") {
-                    if(patternStringA[i+2] == "7") {
+                    if(patternStringA[i+2] == "8") {
                         nounQue[nounQue.length-1] = i + "pnts" + i+2;
                     }
                 } else {
@@ -62,5 +64,8 @@ var io = {
         }
         //done with noun que
         return nounQue;
+        for(i=0;i<patternStringA.length;i++) {
+
+        }
     }
 }
