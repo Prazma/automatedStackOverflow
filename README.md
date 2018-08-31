@@ -1,4 +1,7 @@
 # Automated StackOverflow
+### WARNING!
+I have experienced several merge conflicts and errors on commitment. If the project does not work, please contact me on issues. (The repository might have not been updated properly)
+
 ### What is this?
 I have created a new algorithm, of which allows a computer to generate a custom responce to a natural language (like English, Spanish, Japanese and etc). So, by using a combination of that algorithm with a little knowledge of programming programmed into the chatbot, I have created a **bot that answers to questions that you see on StackOverflow.**
 
